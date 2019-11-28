@@ -1,0 +1,226 @@
+.card-menu {
+  text-align: center;
+  .card-image {
+    max-width: 169px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 18px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    padding-bottom: 34%;
+  }
+  .card-title {
+    text-transform: uppercase;
+    color: $gray-300;
+    font-size: 67px;
+    font-family: $font-family-heronsanscond;
+    font-weight: $font-weight-bold;
+    margin-bottom: 0;
+  }
+  .subtitle {
+    font-size: 19px;
+    color: $white;
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+    font-family: $font-family-heronsanscond;
+    margin-bottom: 0;
+  }
+  @include media-breakpoint-down('md') {
+    .card-image {
+      padding-bottom: 40%;
+    }
+    .card-title {
+      font-size: 48px;
+    }
+    .subtitle {
+      font-size: 14px;
+    }
+  }
+}
+
+.card-project {
+  margin-bottom: 20px;
+  transition: all .3s;
+  &:hover {
+    text-decoration: none;
+  }
+  .action-link {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: $warning;
+    width: 43px;
+    height: 43px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    outline: none;
+    border: none;
+    &:hover {
+      background-color: darken($warning, 3);
+      color: transparent;
+    }
+    &:before {
+      content: '\2192';
+      font-size: 32px;
+      line-height: 1;
+      color: $white;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+  }
+  .card-image {
+    padding-bottom: 68%;
+    position: relative;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    
+  }
+  .card-body {
+    position: relative;
+    background: $white;
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .logo {
+        img {
+          max-width: 73px;
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+    .sub-title {
+      font-weight: $font-weight-medium;
+      font-family: $font-family-heronsans;
+      text-transform: uppercase;
+    }
+    .title {
+      font-size: 20px;
+      font-family: $font-family-heronsans;
+      font-weight: $font-weight-bold;
+      text-transform: uppercase;
+    }
+    &.has-action {
+      .action-link {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+    }
+  }
+  &:hover {
+    box-shadow: $box-shadow;
+    transform: scale(1.03);
+    .action-link {
+      display: flex !important;
+    }
+  }
+}
+
+.card-value {
+  margin-bottom: 12px;
+  .card-icon {
+    width: 138px;
+    height: 138px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 23px;
+    background-color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 138px;
+    svg {
+      width: 74px !important;
+      height: 74px !important;
+      path {
+        fill: $warning;
+        stroke: $warning;
+      }
+    }
+  }
+  .card-body {
+    padding: 30px;
+    padding-bottom: 40px;
+    @include media-breakpoint-down('md') {
+      padding: 20px;
+    }
+    .card-title {
+      text-transform: uppercase;
+      font-weight: $font-weight-bold;
+      font-family: $font-family-heronsans;
+      margin-bottom: 4px;
+      color: $primary;
+      text-align: center;
+    }
+    .card-content {
+      text-align: center;
+      color: rgba($primary, 0.7);
+    }
+  }
+}
+
+.card-form {
+  margin-bottom: 40px;
+  .card-body {
+    padding: 28px 45px;
+    padding-bottom: 60px;
+    position: relative;
+    .action-link {
+      background-color: $warning;
+      width: 43px;
+      height: 43px;
+      position: relative;
+      &:hover {
+        color: transparent;
+      }
+      &:before {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        content: '\2192';
+        font-size: 28px;
+        line-height: 1;
+        color: $white;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+    }
+    button {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      display: flex;
+      border: none;
+      align-items: center;
+      text-transform: uppercase;
+      font-weight: $font-weight-bold;
+      font-family: $font-family-heronsans;
+      padding-right: 0;
+      padding-bottom: 0;
+    }
+    @include media-breakpoint-down('md') {
+      padding: 20px;
+    }
+    .form-group {
+      margin-bottom: 26px;
+      label {
+        text-transform: uppercase;
+        color: rgba($secondary, 0.5);
+        font-size: 12px;
+        font-weight: $font-weight-medium;
+        margin-bottom: 0;
+      }
+      .form-control {
+        border-bottom: 1px solid $info;
+        border-radius: 0;
+        padding-left: 0;
+      }
+    }
+  }
+}

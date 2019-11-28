@@ -1,0 +1,144 @@
+@keyframes flip-logo {
+  0% {
+    transform: rotateX(360deg);
+  }
+
+  30% {
+    transform: rotateX(360deg);
+  }
+
+  50% {
+    transform: rotateX(180deg);
+  }
+
+  70% {
+    transform: rotateX(0deg);
+  }
+
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+.site-footer {
+  padding-top: 75px;
+  padding-bottom: 60px;
+  background-color: $primary;
+  position: relative;
+  z-index: 1000;
+  .footer {
+    position: relative;
+  }
+  @include media-breakpoint-down('md') {
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+  .footer-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    @include media-breakpoint-down('md') {
+      margin-bottom: 240px;
+    }
+    .footer-logo {
+      img {
+        width: 170px;
+        height: auto;
+        @include media-breakpoint-down('md') {
+          width: 140px;
+        }
+      }
+    }
+    .contact-info {
+      .contact-number {
+        a {
+          font-size: 35px;
+          margin-bottom: 8px;
+          font-weight: $font-weight-bold;
+          font-family: $font-family-heronsanscond;
+          color: $warning;
+          @include media-breakpoint-down('md') {
+            font-size: 30px;
+          }
+        }
+      }
+      .contact-address {
+        color: rgba($white, 0.7);
+        font-size: 15px;
+      }
+      @include media-breakpoint-down('md') {
+        position: absolute;
+        left: 0;
+        top: 121px;
+      }
+    }
+    .footer-image {
+      img {
+        width: 170px;
+        height: auto;
+        @include media-breakpoint-down('md') {
+          width: 128px;
+        }
+      }
+    }
+    
+  }
+  .footer-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    .staff-portal {
+      color: rgba($white, 0.7);
+    }
+    .footer-menu {
+      margin-left: 63px;
+      li {
+        .nav-link {
+          padding-bottom: 0;
+          font-weight: $font-weight-bold;
+          font-family: $font-family-heronsanscond;
+          color: $info;
+          text-transform: uppercase;
+        }
+      }
+      @include media-breakpoint-down('md') {
+        margin-left: 0;
+        position: absolute;
+        right: 0;
+        top: 165px;
+        text-align: right;
+        display: block;
+        li {
+          .nav-link {
+            padding-right: 0;
+          }
+        }
+      }
+    }
+    .flip-logo {
+      .anim-flip-logo {
+        display: inline-block;
+        perspective: 1em;
+        transform-style: preserve-3d;
+        transform: rotateX(0deg);
+        color: rgba($white, 0.7) !important;
+        white-space: nowrap;
+        &:hover {
+          text-decoration: none;
+          animation: flip-logo 4s ease-in-out infinite;
+        }
+      
+        svg {
+          vertical-align: middle;
+          height: $font-size-base * 1.5;
+          width: $font-size-base * 1.5;
+        }
+      }
+    }
+  }
+}
+
+.navigation-opened {
+  .site-footer {
+    display: none;
+  }
+}

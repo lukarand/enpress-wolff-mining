@@ -1,0 +1,42 @@
+
+.other-hero-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 551px;
+  background-image: url('../img/backgrounds/hero-background.png');
+  background-position: top;
+  background-size: cover;
+  background-color: $black;
+  .card-menu {
+    .card-title {
+      font-size: 112px;
+      @include media-breakpoint-down('md') {
+        font-size: 64px;
+      }
+    }
+    .subtitle {
+      font-size: 32px;
+      @include media-breakpoint-down('md') {
+        font-size: 19px;
+      }
+    }
+  }
+  .down-arrow {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: -35px;
+    z-index: 2;
+    .arrow-link {
+      text-transform: uppercase;
+      color: $gray;
+      font-family: $font-family-heronsans;
+      font-weight: $font-weight-bold;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}

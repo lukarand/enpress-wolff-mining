@@ -1,0 +1,15 @@
+.contact-info {
+  margin-bottom: 40px;
+  .infos {
+    columns: 2;
+    @include media-breakpoint-down('sm') {
+      columns: 1;
+    }
+    .info {
+      margin-bottom: 35px;
+      .value {
+        font-weight: $font-weight-bold;
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.site-header {
+  z-index: $header-z-index;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-image: url('../img/backgrounds/hero-background.png');
+  background-size: 0%;
+  height: 188px;
+  overflow: hidden;
+}
+
+.navigation-opened {
+  .site-header {
+    height: auto;
+    min-height: 100%;
+    background-color: $black;
+    background-position: top;
+    background-size: 1800%;
+  }
+}

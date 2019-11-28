@@ -1,0 +1,28 @@
+.btn {
+  text-transform: uppercase;
+}
+
+@each $key, $color in $theme-colors {
+  .btn-#{$key} {
+    text-transform: uppercase;
+    font-weight: $font-weight-bold;
+    font-size: 15px;
+    font-family: HeronSans;
+    color: $color !important;
+    border-radius: 0;
+    background: transparent;
+    padding: 10px 0;
+    border-bottom: 2px solid $color !important;
+    &:hover {
+      color: $color;
+      background: transparent;
+      text-decoration: none;
+    }
+    &:active {
+      background: transparent !important;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+}

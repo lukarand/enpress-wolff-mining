@@ -1,0 +1,45 @@
+.column-content {
+  @include media-breakpoint-down('md') {
+    margin-bottom: 24px;
+  }
+  .title {
+    padding-top: 27px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    position: relative;
+    @include media-breakpoint-down('md') {
+      h1, h2, h3, h4 {
+        font-size: 35px;
+      }
+    }
+    @each $key, $color in $theme-colors {
+      &.before-#{$key} {
+        &:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 75px;
+          height: 2px;
+          background-color: $color;
+        }
+      }
+    }
+    .logo {
+      margin-top: 21px;
+      margin-bottom: 18px;
+      img {
+        max-width: 131px;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+  .content {
+    color: rgba($primary, 0.7);
+    margin-bottom: 16px;
+    &.text-white {
+      color: rgba($white, 0.7) !important;
+    }
+  }
+}

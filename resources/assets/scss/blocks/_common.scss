@@ -1,0 +1,73 @@
+.block {
+  position: relative;
+  &.background-before {
+    &:before {
+      position: absolute;
+      content: "";
+      width: 958px;
+      height: 941px;
+      background-image: url('../img/backgrounds/map-background.png');
+      background-size: cover;
+      background-position: right;
+      left: 0;
+      top: -143px;
+      z-index: 0;
+      @include media-breakpoint-down('md') {
+        background: none;
+        display: none;
+      }
+    }
+    &.background-gray-before {
+      &:before {
+        background-image: url('../img/backgrounds/map-gray-background.png');
+        background-size: cover;
+        background-position: right;
+      }
+    }
+  }
+  &.bg-bitmap {
+    &:after {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background-color: $light;
+      background-image: url('../img/backgrounds/projects-background.png');
+      background-size: cover;
+      background-position: center;
+      z-index: 1;
+    }
+    .container {
+      position: relative;
+      z-index: 2;
+    }
+  }
+  .section-title {
+    padding-top: 27px;
+    text-align: center;
+    margin-bottom: 70px;
+    h1, h2, h3, h4, h5, h6 {
+      text-transform: uppercase;
+      display: inline;
+      position: relative;
+      &:before {
+        position: absolute;
+        content: '';
+        width: 75px;
+        height: 2px;
+        background: $warning;
+        top: -27px;
+        left: 33%;
+      }
+    }
+  }
+  .section-content {
+    color: rgba($primary, 0.7);
+    margin-bottom: 38px;
+  }
+  ul {
+    padding-left: 15px;
+  }
+}

@@ -1,0 +1,106 @@
+.column-services-block {
+  padding-top: 135px;
+  padding-bottom: 142px;
+  position: relative;
+  .section-title {
+    margin-bottom: 70px;
+  }
+  @include media-breakpoint-down('md') {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+  .card-body {
+    @include media-breakpoint-up('lg') {
+      min-height: 290px;
+    }
+    @include media-breakpoint-down('lg') {
+      min-height: 368px;
+    }
+    @include media-breakpoint-down('md') {
+      min-height: 240px;
+    }
+    @include media-breakpoint-down('sm') {
+      min-height: auto;
+    }
+  }
+}
+
+.column-projects-block {
+  padding-top: 139px;
+  padding-bottom: 118px;
+  position: relative;
+  @include media-breakpoint-down('md') {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+  &.background-before {
+    &:before {
+      width: 958px;
+      height: 941px;
+      top: -360px;
+    }
+  }
+  .card-body {
+    min-height: 305px;
+  }
+}
+
+.column-values-block {
+  padding-top: 109px;
+  padding-bottom: 82px;
+  position: relative;
+  @include media-breakpoint-down('md') {
+    padding-top: 50px;
+    padding-bottom: 40px;
+  }
+  .section-title {
+    margin-bottom: 35px;
+  }
+  .section-content {
+    max-width: 618px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &.background-before {
+    &:before {
+      width: 958px;
+      height: 941px;
+      top: -143px;
+    }
+  }
+  .row {
+    position: relative;
+    z-index: 3;
+  }
+  .background-circle {
+    position: absolute;
+    width: 737px;
+    height: 737px;
+    border-radius: 50%;
+    border: 1px solid rgba(#CFCFCF, 0.8);
+    z-index: 1;
+    left: 19%;
+    top: 27%;
+    opacity: 0.8;
+    display: none;
+    @media screen and (min-width: 1300px) {
+      display: block;
+    }
+  }
+}
+
+.column-plus-block {
+  padding-top: 45px;
+  padding-bottom: 38px;
+  position: relative;
+  .column-content {
+    text-align: center;
+    .content {
+      line-height: 35px;
+      letter-spacing: -0.5px;
+      font-size: 25px;
+      font-weight: $font-weight-bold;
+      color: $white;
+    }
+  }
+}
